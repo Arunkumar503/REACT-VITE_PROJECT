@@ -1,162 +1,192 @@
- .n1 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+/* ================================ */
+/* GENERAL STYLES */
+/* ================================ */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff5f5;
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #333;
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
 }
 
-/* Rows of dishes */
-.n2, .n3 {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
+/* ================================ */
+/* MAIN MENU PAGE */
+/* ================================ */
+.nv1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Individual dish styling */
-.dish1, .dish2, .dish3, .dish4, .dish5, .dish6 {
-  flex: 1;
-  margin: 0 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: box-shadow 0.3s ease;
+.nonveg-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
-.dish1:hover, .dish2:hover, .dish3:hover, .dish4:hover, .dish5:hover, .dish6:hover {
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+/* ================================ */
+/* DISH CARD */
+/* ================================ */
+.nv2 {
+    background-color: #fff0f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.2s;
 }
 
-.dish1 img, .dish2 img, .dish3 img, .dish4 img, .dish5 img, .dish6 img {
-  width: 100%;
-  max-height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 15px;
+.nv2:hover {
+    transform: translateY(-5px);
 }
 
-.dish1 h2, .dish2 h2, .dish3 h2, .dish4 h2, .dish5 h2, .dish6 h2 {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-  color: #222;
+.nv2 img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-.dish1 p, .dish2 p, .dish3 p, .dish4 p, .dish5 p, .dish6 p {
-  font-weight: 600;
-  margin-bottom: 15px;
-  color: #555;
+.nv2 h2 {
+    font-size: 18px;
+    margin: 10px 0 5px;
 }
 
-/* Controls container */
-.controls {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.nv2 p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #444;
 }
 
-.controls button {
-  background-color: #ff5722;
-  border: none;
-  color: white;
-  font-size: 1.1rem;
-  padding: 8px 14px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+.nv2 button {
+    margin: 5px 3px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4d4d;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-.controls button:hover {
-  background-color: #e64a19;
+.nv2 button:hover {
+    background-color: #e03c3c;
 }
 
-/* Quantity number */
-.controls span {
-  min-width: 30px;
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
-/* Separate order button style */
-.o1 {
-  background-color: #4caf50;
-  padding: 8px 16px;
-}
-
-.o1:hover {
-  background-color: #388e3c;
-}
-
-/* Cart styling */
+/* ================================ */
+/* CART SECTION */
+/* ================================ */
 .cart {
-  max-width: 600px;
-  margin: 0 auto 50px auto;
-  padding: 20px;
-  border: 2px solid #4caf50;
-  border-radius: 10px;
-  background-color: #f0fff4;
-  box-shadow: 0 4px 10px rgba(76,175,80,0.2);
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .cart h2 {
-  text-align: center;
-  color: #388e3c;
-  margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .cart ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 15px;
+    list-style-type: none;
+    padding: 0;
 }
 
-.cart ul li {
-  padding: 8px 12px;
-  border-bottom: 1px solid #a5d6a7;
-  font-weight: 600;
-  color: #2e7d32;
+.cart li {
+    margin: 8px 0;
+    font-size: 16px;
 }
 
 .cart h3 {
-  text-align: right;
-  color: #1b5e20;
-  margin-bottom: 20px;
+    margin-top: 15px;
 }
 
 .cart button {
-  display: block;
-  margin: 0 auto;
-  background-color: #f44336;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: 700;
-  transition: background-color 0.2s ease;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .cart button:hover {
-  background-color: #d32f2f;
+    background-color: #218838;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .n2, .n3 {
-    flex-direction: column;
-  }
+/* ================================ */
+/* USER FORM / PAYMENT / SUCCESS */
+/* ================================ */
+.user-form, .payment-box, .success-box {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #fff0f0;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
-  .dish1, .dish2, .dish3, .dish4, .dish5, .dish6 {
+.user-form input,
+.user-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.user-form button,
+.payment-box button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.user-form button:hover,
+.payment-box button:hover {
+    background-color: #e03c3c;
+}
+
+.payment-box label {
+    display: block;
     margin: 10px 0;
-  }
+    font-size: 16px;
+}
+
+.payment-box input[type="radio"] {
+    margin-right: 10px;
+}
+
+.success-box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.success-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.success-box li {
+    font-size: 16px;
+    margin: 5px 0;
 }
